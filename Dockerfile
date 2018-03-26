@@ -1,12 +1,11 @@
 # gunicorn-flask
 
-FROM ubuntu:12.04
-MAINTAINER Daniel Riti <dmriti@gmail.com>
+FROM ubuntu
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get install -y python python-pip python-virtualenv gunicorn
+RUN apt-get install -y python3 python-pip python-virtualenv gunicorn
 
 # Setup flask application
 RUN mkdir -p /deploy/app
